@@ -1,0 +1,30 @@
+global_options:
+  build_web_compilers|entrypoint:
+    options:
+      native_null_assertions: false
+      sound_null_safety: true
+      # compiler: dart2js
+      dart2js_args:
+        # -O0
+        # - --disable-inlining
+        # - --disable-type-inference
+        # - --disable-rti-optimizations
+
+        # -O1
+
+        # -O2
+        # - --minify
+        - --lax-runtime-type-to-string
+        - --omit-late-names
+
+        # -O3
+        - --omit-implicit-checks
+
+        # -O4
+        - --trust-primitives
+
+        # - --csp
+        # - --no-source-maps
+        - --omit-as-casts
+        - --server-mode
+        # - --verbose
